@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nurul Awatif | Chemical Engineering</title>
+
+    <title>Nurul Awatif | Chemical Engineering Student</title>
 
     <style>
+        /* =========================
+           GENERAL
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -14,140 +19,504 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f7f7f5;
-            color: #222;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f8f6;
+            color: #1f1f1f;
             line-height: 1.6;
         }
 
-        nav {
-            position: fixed;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
             top: 0;
-            width: 100%;
-            background: white;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             z-index: 1000;
         }
 
-        nav h2 {
-            font-size: 20px;
+        .nav-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
         }
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            margin-left: 25px;
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
             font-size: 14px;
         }
 
-        nav a:hover {
-            color: #777;
+        nav a {
+            color: #555;
+            transition: 0.3s;
         }
 
-        section {
-            padding: 100px 10%;
+        nav a:hover {
+            color: #000;
         }
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            background: #eeeeea;
+            padding: 80px 0;
+            background: #f8f8f6;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-small {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #777;
+            margin-bottom: 15px;
         }
 
         .hero h1 {
-            font-size: 55px;
-            margin-bottom: 10px;
+            font-size: clamp(45px, 8vw, 90px);
+            line-height: 0.95;
+            letter-spacing: -4px;
+            margin-bottom: 25px;
         }
 
-        .hero h3 {
+        .hero h2 {
             font-size: 24px;
-            font-weight: normal;
+            font-weight: 500;
             margin-bottom: 20px;
         }
 
         .hero p {
-            max-width: 650px;
-            color: #555;
+            max-width: 700px;
+            color: #666;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 25px;
             padding: 12px 22px;
+            border: 1px solid #222;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .btn-dark {
             background: #222;
             color: white;
-            text-decoration: none;
-            border-radius: 6px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .section-heading {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 30px;
+            margin-bottom: 55px;
+        }
+
+        .section-number {
+            font-size: 15px;
+            color: #888;
+            font-weight: bold;
         }
 
         .section-title {
-            font-size: 32px;
-            margin-bottom: 35px;
+            font-size: 42px;
+            line-height: 1;
+            letter-spacing: -1px;
         }
 
-        .about p {
-            max-width: 800px;
+        .section-description {
+            margin-top: 15px;
+            color: #777;
+            max-width: 650px;
         }
 
-        .card-container {
+        /* =========================
+           OBJECTIVE
+        ========================= */
+
+        .objective-box {
+            max-width: 850px;
+            margin-left: 130px;
+        }
+
+        .objective-box p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-item {
+            margin-left: 130px;
+            padding: 30px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .education-item:first-child {
+            border-top: 1px solid #ddd;
+        }
+
+        .education-status {
+            font-size: 13px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .education-item h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .education-item p {
+            color: #666;
+        }
+
+        .cgpa {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience-item {
+            margin-left: 130px;
+            padding: 35px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .experience-item:first-child {
+            border-top: 1px solid #ddd;
+        }
+
+        .experience-meta {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .experience-item h3 {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .experience-place {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .experience-item ul {
+            padding-left: 20px;
+            color: #555;
+        }
+
+        .experience-item li {
+            margin-bottom: 7px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            margin-left: 130px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #999;
+        }
+
+        .project-number {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .tag {
+            border: 1px solid #ccc;
+            padding: 5px 9px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        /* =========================
+           VOLUNTEER
+        ========================= */
+
+        .volunteer-grid {
+            margin-left: 130px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .volunteer-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 30px;
+        }
+
+        .volunteer-card h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .volunteer-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-container {
+            margin-left: 130px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
 
-        .card {
+        .skill-box {
             background: white;
+            border: 1px solid #ddd;
             padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
         }
 
-        .card h3 {
-            margin-bottom: 10px;
+        .skill-box h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
         }
 
-        .card p {
-            color: #555;
+        .skill-box p {
+            color: #666;
             font-size: 14px;
         }
 
-        ul {
-            padding-left: 20px;
+        /* =========================
+           ACHIEVEMENTS
+        ========================= */
+
+        .achievement-list {
+            margin-left: 130px;
         }
 
-        .skills span {
-            display: inline-block;
+        .achievement {
             background: white;
-            padding: 10px 15px;
-            margin: 6px;
-            border-radius: 20px;
-            font-size: 14px;
+            border: 1px solid #ddd;
+            padding: 30px;
+            margin-bottom: 20px;
         }
+
+        .achievement h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .achievement p {
+            color: #666;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-content {
+            margin-left: 130px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-box h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .contact-link {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            text-align: center;
-            padding: 30px;
             background: #222;
             color: white;
+            padding: 30px 0;
         }
 
-        @media (max-width: 700px) {
-            .hero h1 {
-                font-size: 40px;
+        .footer-content {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 13px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
             }
 
             nav {
-                padding: 15px 5%;
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+                font-size: 12px;
             }
 
-            nav a {
-                margin-left: 10px;
-                font-size: 12px;
+            .hero {
+                min-height: 80vh;
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+                letter-spacing: -3px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .section-heading {
+                display: block;
+                margin-bottom: 35px;
+            }
+
+            .section-number {
+                margin-bottom: 10px;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+
+            .objective-box,
+            .education-item,
+            .experience-item,
+            .projects-grid,
+            .volunteer-grid,
+            .skills-container,
+            .achievement-list,
+            .contact-content {
+                margin-left: 0;
+            }
+
+            .projects-grid,
+            .volunteer-grid,
+            .skills-container,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .objective-box p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 65px 0;
             }
         }
     </style>
@@ -155,187 +524,977 @@
 
 <body>
 
-    <nav>
-        <h2>Nurul Awatif</h2>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-        <div>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+    <header>
+        <div class="nav-container">
+
+            <div class="logo">
+                NURUL AWATIF
+            </div>
+
+            <nav>
+                <a href="#objective">Objective</a>
+                <a href="#education">Education</a>
+                <a href="#working">Working</a>
+                <a href="#leadership">Leadership</a>
+                <a href="#projects">Projects</a>
+                <a href="#volunteer">Volunteer</a>
+                <a href="#skills">Skills</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
         </div>
-    </nav>
+    </header>
 
+
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero">
-        <div>
-            <h1>Hi, I'm Nurul Awatif.</h1>
 
-            <h3>Chemical Engineering Student @ UKM</h3>
+        <div class="container">
 
-            <p>
-                Passionate about process design, sustainable engineering,
-                data analysis and innovative engineering solutions.
-            </p>
+            <div class="hero-content">
 
-            <a href="#projects" class="btn">View My Projects</a>
+                <div class="hero-small">
+                    Chemical Engineering Student @ UKM
+                </div>
+
+                <h1>
+                    Nurul<br>
+                    Awatif.
+                </h1>
+
+                <h2>
+                    Chemical Engineering Student
+                </h2>
+
+                <p>
+                    Motivated Chemical Engineering student with an interest in
+                    process design, sustainable engineering, data analysis and
+                    innovative engineering solutions.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-dark">
+                        View My Projects
+                    </a>
+
+                    <a href="#contact" class="btn">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
 
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
+    <!-- =========================
+         OBJECTIVE
+    ========================== -->
 
-        <p>
-            I am a Chemical Engineering student at Universiti Kebangsaan
-            Malaysia (UKM), interested in process design, reaction engineering,
-            separation processes, data analysis and sustainable engineering.
-            I enjoy learning through academic projects, competitions and
-            international innovation programmes.
-        </p>
+    <section id="objective">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    01
+                </div>
+
+                <div>
+                    <h2 class="section-title">
+                        Career Objective
+                    </h2>
+
+                    <p class="section-description">
+                        A brief overview of my career goals and internship objective.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="objective-box">
+
+                <p>
+                    Motivated Chemical Engineering student seeking an internship
+                    from <strong>12 July 2027 to 12 September 2027</strong>.
+                    Eager to apply knowledge in chemical process engineering,
+                    process design, data analysis and sustainable engineering
+                    while gaining hands-on industrial experience.
+                </p>
+
+            </div>
+
+        </div>
+
     </section>
 
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
 
     <section id="education">
-        <h2 class="section-title">Education</h2>
 
-        <div class="card-container">
+        <div class="container">
 
-            <div class="card">
-                <h3>Bachelor of Chemical Engineering</h3>
-                <p>
-                    Universiti Kebangsaan Malaysia (UKM)<br>
-                    Current CGPA: 3.49
-                </p>
+            <div class="section-heading">
+
+                <div class="section-number">
+                    02
+                </div>
+
+                <div>
+                    <h2 class="section-title">
+                        Education
+                    </h2>
+
+                    <p class="section-description">
+                        My academic background in science and chemical engineering.
+                    </p>
+                </div>
+
             </div>
 
-            <div class="card">
-                <h3>Foundation in Science</h3>
+
+            <div class="education-item">
+
+                <div class="education-status">
+                    Current
+                </div>
+
+                <h3>
+                    Bachelor of Chemical Engineering
+                </h3>
+
                 <p>
-                    Selangor Matriculation College<br>
-                    CGPA: 3.92
+                    Universiti Kebangsaan Malaysia (UKM)
                 </p>
+
+                <div class="cgpa">
+                    Current CGPA: 3.49
+                </div>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <div class="education-status">
+                    Completed
+                </div>
+
+                <h3>
+                    Foundation in Science
+                </h3>
+
+                <p>
+                    Selangor Matriculation College
+                </p>
+
+                <div class="cgpa">
+                    CGPA: 3.92
+                </div>
+
             </div>
 
         </div>
+
     </section>
 
+
+    <!-- =========================
+         WORKING EXPERIENCE
+    ========================== -->
+
+    <section id="working">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    03
+                </div>
+
+                <div>
+                    <h2 class="section-title">
+                        Working Experience
+                    </h2>
+
+                    <p class="section-description">
+                        Practical experience developed through teaching and
+                        working with students.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-meta">
+                    Part-Time
+                </div>
+
+                <h3>
+                    Tuition Teacher
+                </h3>
+
+                <div class="experience-place">
+                    Mathematics & Science
+                </div>
+
+                <ul>
+                    <li>
+                        Taught primary school students in Mathematics and Science,
+                        delivering lessons and providing guidance to strengthen
+                        their understanding of academic subjects.
+                    </li>
+
+                    <li>
+                        Prepared exercises and monitored students' progress
+                        to support their academic development.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LEADERSHIP
+    ========================== -->
+
+    <section id="leadership">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    04
+                </div>
+
+                <div>
+                    <h2 class="section-title">
+                        Leadership Experience
+                    </h2>
+
+                    <p class="section-description">
+                        Leadership and programme involvement throughout my
+                        university experience.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- CHESC -->
+
+            <div class="experience-item">
+
+                <h3>
+                    Head of Academic Executive Committee
+                </h3>
+
+                <div class="experience-place">
+                    Chemical Engineering Student Club (CHESC), UKM
+                </div>
+
+                <ul>
+
+                    <li>
+                        Led the Academic Executive Committee in organising
+                        academic programmes and initiatives to support the
+                        development of Chemical Engineering students.
+                    </li>
+
+                    <li>
+                        Managed team responsibilities, coordinated activities
+                        and collaborated with committee members to ensure
+                        effective programme execution.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- OEL -->
+
+            <div class="experience-item">
+
+                <h3>
+                    Program Leader – Open-Ended Laboratory (OEL)
+                </h3>
+
+                <div class="experience-place">
+                    Universiti Kebangsaan Malaysia (UKM)
+                </div>
+
+                <ul>
+
+                    <li>
+                        Led and coordinated a student innovation programme
+                        focused on sustainable chemical engineering solutions.
+                    </li>
+
+                    <li>
+                        Coordinated programme activities, participants and
+                        team responsibilities to ensure smooth execution.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- MALAM ANUGERAH -->
+
+            <div class="experience-item">
+
+                <h3>
+                    Programme Executive
+                </h3>
+
+                <div class="experience-place">
+                    Malam Anugerah Kolej Ibrahim Yaakub, UKM
+                </div>
+
+                <ul>
+
+                    <li>
+                        Coordinated programme flow and event activities for
+                        the college annual awards ceremony.
+                    </li>
+
+                    <li>
+                        Collaborated with committee members to manage event
+                        preparations and ensure smooth execution.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- ICAPS -->
+
+            <div class="experience-item">
+
+                <div class="experience-meta">
+                    23 August 2026 – 29 August 2026
+                </div>
+
+                <h3>
+                    Team Leader – i-CAPS Innovation Programme
+                </h3>
+
+                <div class="experience-place">
+                    Jeonbuk National University, South Korea
+                </div>
+
+                <ul>
+
+                    <li>
+                        Led a multidisciplinary team in the i-CAPS project,
+                        coordinating project development, discussions and
+                        final modifications before presentation.
+                    </li>
+
+                    <li>
+                        Collaborated with students from different backgrounds
+                        and guided the team through project presentation and
+                        evaluation by a panel of judges.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACADEMIC PROJECTS
+    ========================== -->
 
     <section id="projects">
-        <h2 class="section-title">Academic Projects</h2>
 
-        <div class="card-container">
+        <div class="container">
 
-            <div class="card">
-                <h3>Maleic Anhydride Production Process Design</h3>
+            <div class="section-heading">
 
-                <p>
-                    Designed a process for maleic anhydride production from
-                    n-butane oxidation using a packed-bed reactor and VPO catalyst.
-                </p>
+                <div class="section-number">
+                    05
+                </div>
+
+                <div>
+                    <h2 class="section-title">
+                        Academic Projects
+                    </h2>
+
+                    <p class="section-description">
+                        Selected engineering, design, sustainability and
+                        data-related projects.
+                    </p>
+
+                </div>
+
             </div>
 
 
-            <div class="card">
-                <h3>TMP Trioleate Biolubricant Production</h3>
-
-                <p>
-                    Developed a process for producing TMP trioleate biolubricant
-                    from microbial lipids through fermentation, extraction
-                    and esterification.
-                </p>
-            </div>
+            <div class="projects-grid">
 
 
-            <div class="card">
-                <h3>Alloy Property Prediction using Machine Learning</h3>
+                <!-- PROJECT 1 -->
 
-                <p>
-                    Applied Exploratory Data Analysis, K-Means clustering and
-                    regression modelling to analyse alloy compositions and
-                    predict material properties.
-                </p>
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 01
+                    </div>
+
+                    <h3>
+                        Maleic Anhydride Production Process Design
+                    </h3>
+
+                    <p>
+                        Chemical process design project involving the
+                        production of maleic anhydride through reaction
+                        engineering and process analysis.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Process Design
+                        </span>
+
+                        <span class="tag">
+                            Reactor Design
+                        </span>
+
+                        <span class="tag">
+                            Chemical Engineering
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
+
+                    <h3>
+                        Biolubricant Production from Microbial Lipids
+                    </h3>
+
+                    <p>
+                        Sustainable engineering project focused on the
+                        production of biolubricant from microbial lipids
+                        through fermentation and downstream processing.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Sustainable Engineering
+                        </span>
+
+                        <span class="tag">
+                            Fermentation
+                        </span>
+
+                        <span class="tag">
+                            Process Design
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 03
+                    </div>
+
+                    <h3>
+                        Machine Learning Datathon 2026
+                    </h3>
+
+                    <p>
+                        Applied exploratory data analysis, K-Means clustering
+                        and regression modelling to analyse alloy compositions
+                        and material properties for high-performance
+                        aerospace applications.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Data Analysis
+                        </span>
+
+                        <span class="tag">
+                            Machine Learning
+                        </span>
+
+                        <span class="tag">
+                            Regression
+                        </span>
+
+                        <span class="tag">
+                            K-Means
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 4 -->
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 04
+                    </div>
+
+                    <h3>
+                        i-CAPS Innovation Project
+                    </h3>
+
+                    <p>
+                        International multidisciplinary innovation project
+                        developed through collaborative problem-solving,
+                        design thinking and prototype development.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Innovation
+                        </span>
+
+                        <span class="tag">
+                            Design Thinking
+                        </span>
+
+                        <span class="tag">
+                            Prototyping
+                        </span>
+
+                        <span class="tag">
+                            Teamwork
+                        </span>
+
+                    </div>
+
+                </div>
+
+
             </div>
 
         </div>
+
     </section>
 
 
-    <section id="achievements">
-        <h2 class="section-title">Achievements</h2>
+    <!-- =========================
+         VOLUNTEER
+    ========================== -->
 
-        <div class="card-container">
+    <section id="volunteer">
 
-            <div class="card">
-                <h3>4th Prize – Machine Learning Datathon 2026</h3>
+        <div class="container">
 
-                <p>
-                    Applied machine learning techniques to analyse alloy
-                    compositions and predict material properties for
-                    high-performance aerospace applications.
-                </p>
+            <div class="section-heading">
+
+                <div class="section-number">
+                    06
+                </div>
+
+                <div>
+
+                    <h2 class="section-title">
+                        Volunteer Experience
+                    </h2>
+
+                    <p class="section-description">
+                        Community engagement and volunteer activities.
+                    </p>
+
+                </div>
+
             </div>
 
 
-            <div class="card">
-                <h3>Encouragement Prize – i-CAPS Competition</h3>
+            <div class="volunteer-grid">
 
-                <p>
-                    International multidisciplinary engineering design
-                    competition held at Jeonbuk National University,
-                    South Korea.
-                </p>
+
+                <div class="volunteer-card">
+
+                    <h3>
+                        Gemerlap Sinergi Siswa 02
+                    </h3>
+
+                    <p>
+                        Kolej Ibrahim Yaakub, UKM
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Participated in community service activities focused
+                        on clean-up and improvement of local facilities.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Collaborated with volunteers to support community
+                        welfare and improve shared spaces.
+                    </p>
+
+                </div>
+
+
+                <div class="volunteer-card">
+
+                    <h3>
+                        Bridges & Bloom
+                    </h3>
+
+                    <p>
+                        AIESEC Taylor's University
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Participated in community engagement activities
+                        involving sustainable farming and interaction with
+                        international participants.
+                    </p>
+
+                </div>
+
+
             </div>
 
         </div>
+
     </section>
 
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
 
     <section id="skills">
-        <h2 class="section-title">Skills</h2>
 
-        <div class="skills">
-            <span>Microsoft Excel</span>
-            <span>MATLAB</span>
-            <span>Data Analysis</span>
-            <span>Machine Learning</span>
-            <span>Process Design</span>
-            <span>Engineering Calculations</span>
-            <span>Laboratory Techniques</span>
-            <span>Leadership</span>
-            <span>Teamwork</span>
-            <span>Communication</span>
-            <span>Problem Solving</span>
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    07
+                </div>
+
+                <div>
+
+                    <h2 class="section-title">
+                        Professional Skills
+                    </h2>
+
+                    <p class="section-description">
+                        Technical, analytical and communication skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="skills-container">
+
+
+                <div class="skill-box">
+
+                    <h3>
+                        Chemical Engineering
+                    </h3>
+
+                    <p>
+                        Process Design · Mass & Energy Balance ·
+                        Chemical Process Engineering · Process Analysis
+                    </p>
+
+                </div>
+
+
+                <div class="skill-box">
+
+                    <h3>
+                        Software & Programming
+                    </h3>
+
+                    <p>
+                        MATLAB · Microsoft Excel · Python · GitHub
+                    </p>
+
+                </div>
+
+
+                <div class="skill-box">
+
+                    <h3>
+                        Data Analysis
+                    </h3>
+
+                    <p>
+                        Exploratory Data Analysis (EDA) · Regression
+                        Modelling · K-Means Clustering
+                    </p>
+
+                </div>
+
+
+                <div class="skill-box">
+
+                    <h3>
+                        Languages
+                    </h3>
+
+                    <p>
+                        Malay — Native<br>
+                        English — Professional<br>
+                        French — A2 (Basic)
+                    </p>
+
+                </div>
+
+
+            </div>
+
         </div>
+
     </section>
 
+
+    <!-- =========================
+         ACHIEVEMENTS
+    ========================== -->
+
+    <section id="achievements">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    08
+                </div>
+
+                <div>
+
+                    <h2 class="section-title">
+                        Key Achievements
+                    </h2>
+
+                    <p class="section-description">
+                        Selected awards and competition achievements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement-list">
+
+
+                <div class="achievement">
+
+                    <h3>
+                        Encouragement Prize
+                    </h3>
+
+                    <p>
+                        13th International Students Joint Capstone Design
+                        Project (i-CAPS) Competition · Jeonbuk National
+                        University, South Korea · 2026
+                    </p>
+
+                </div>
+
+
+                <div class="achievement">
+
+                    <h3>
+                        Secured 4th Place
+                    </h3>
+
+                    <p>
+                        Machine Learning Datathon 2026 ·
+                        Universiti Kebangsaan Malaysia
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
 
     <section id="contact">
-        <h2 class="section-title">Contact</h2>
 
-        <p>
-            Interested in connecting or discussing opportunities?
-        </p>
+        <div class="container">
 
-        <p style="margin-top: 15px;">
-            📧 Email: your-email@example.com
-        </p>
+            <div class="section-heading">
 
-        <p>
-            🔗 LinkedIn: Add your LinkedIn here
-        </p>
+                <div class="section-number">
+                    09
+                </div>
 
-        <p>
-            💻 GitHub: awatifzaafar
-        </p>
+                <div>
+
+                    <h2 class="section-title">
+                        Let's Connect
+                    </h2>
+
+                    <p class="section-description">
+                        Interested in internship opportunities and
+                        engineering collaboration.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-content">
+
+
+                <div class="contact-box">
+
+                    <h3>
+                        Internship
+                    </h3>
+
+                    <p>
+                        Available for internship from:
+                    </p>
+
+                    <p>
+                        <strong>
+                            12 July 2027 – 12 September 2027
+                        </strong>
+                    </p>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <!-- CHANGE THESE WITH YOUR REAL DETAILS -->
+
+                    <p>
+                        Email:
+                        <a href="mailto:YOUR_EMAIL@gmail.com"
+                           class="contact-link">
+                            YOUR_EMAIL@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        LinkedIn:
+                        <a href="YOUR_LINKEDIN_LINK"
+                           target="_blank"
+                           class="contact-link">
+                            LinkedIn Profile
+                        </a>
+                    </p>
+
+                    <p>
+                        GitHub:
+                        <a href="YOUR_GITHUB_LINK"
+                           target="_blank"
+                           class="contact-link">
+                            GitHub Profile
+                        </a>
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
     </section>
 
 
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
-        © 2026 Nurul Awatif. All rights reserved.
+
+        <div class="footer-content">
+
+            <span>
+                © 2026 Nurul Awatif
+            </span>
+
+            <span>
+                Chemical Engineering · UKM
+            </span>
+
+        </div>
+
     </footer>
+
 
 </body>
 </html>
